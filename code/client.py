@@ -9,12 +9,11 @@ address = ("localhost", 12345)
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect(address)
 
-
 # COMMAND:VALUE1;VALUE2...
 
 # Echo
 while True:
-    text = input("Digite os dados ou 'sair' para desconectar: ")
+    text = input("Digite o comando seguido dos valores ou 'sair' para desconectar-se: ")
     
     if(text == "sair"):
         client_socket.close()
