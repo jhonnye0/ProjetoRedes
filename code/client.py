@@ -3,7 +3,7 @@
 
 import socket
 
-address = ("localhost", 12345)
+address = ("localhost", 7777)
 
 # Create sockets
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -13,9 +13,9 @@ client_socket.connect(address)
 
 # Echo
 while True:
-    text = input("Digite o comando seguido dos valores ou 'sair' para desconectar-se: ")
+    text = input("Digite o comando seguido dos valores ou 'exit' para desconectar-se: ")
     
-    if(text == "sair"):
+    if(text.lower() == "exit"):
         client_socket.close()
         break
 

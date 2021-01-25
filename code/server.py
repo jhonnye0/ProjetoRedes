@@ -15,8 +15,8 @@ commands = {
 
 texts = {
 
-    'REGISTRATION': "DECLARO, SOB PENA DE LEI, QUE O INDIVÍDUO DE NOME: _NAME E IDENTIFICAÇÃO _ID ESTÁ MATRICULADO NA ESCOLA _SCHOOL DE ACORDO COM OS REQUERIMENTOS CONSTADOS NA MATRÍCULA DO MESMO",
-    'INCOME': "O INDIVÍDUO _NAME, QUE MORA NO ENDEREÇO _ADDRESS, POSSUI UMA QUANTIA DECLARADA DE R$ _VALUE PARA MAIS INFORMAÇÕES CONSULTE O SITE DO GOVERNO WWW.GOVERNO.COM.GOV ."
+    'REGISTRATION': "DECLARO, SOB PENA DE LEI, QUE O INDIVÍDUO DE NOME: _NAME E IDENTIFICAÇÃO _ID ESTÁ MATRICULADO NA ESCOLA _SCHOOL DE ACORDO COM OS REQUERIMENTOS CONSTADOS NA MATRÍCULA DO MESMO.",
+    'INCOME': "O INDIVÍDUO _NAME, QUE MORA NO ENDEREÇO _ADDRESS, POSSUI UMA QUANTIA DECLARADA DE R$ _VALUE PARA MAIS INFORMAÇÕES CONSULTE O SITE DO GOVERNO WWW.GOVERNO.COM.GOV."
 }
 
 def extract_info(data):
@@ -32,7 +32,7 @@ def extract_info(data):
         p = data.split(':')[1].split(';')
 
         if len(p) != 3:
-            return "301/ Parâmetros inválidos, digite o comando novamente com os seguintes parâmetros respectivamente" + str(commands[cmd])
+            return "301 - Parâmetros inválidos, digite o comando novamente com os seguintes parâmetros respectivamente" + str(commands[cmd])
 
         parameters = {}
         i = 0
@@ -46,12 +46,12 @@ def extract_info(data):
         for key in commands[cmd]:
             text = text.replace(key, parameters[key])
 
-        return "STATUS 200/ " + text
+        return "200 - " + text
 
     else:
-        return "STATUS 300/ Comando inválido, digite um dos comandos novamente (INCOME, REGISTRATION)" 
+        return "300 - Comando inválido, digite um dos comandos novamente (INCOME, REGISTRATION)" 
   
-def thread(c): 
+def thread(c, addr): 
 
     while True: 
         
@@ -59,7 +59,7 @@ def thread(c):
         data = c.recv(1024).decode()
 
         if not data: 
-            print('Byeee')
+            print('400 - Bye ' + addr[0])
             break
 
         text = extract_info(data)
@@ -69,7 +69,6 @@ def thread(c):
     # connection closed 
     c.close() 
 
-# hostname
 host = "localhost" 
   
 # reverse a port on your computer
@@ -80,6 +79,7 @@ s.bind((host, port))
 print("socket binded to port", port) 
 
 # Put the socket into listening mode 
+
 s.listen(5) 
 print("socket is listening") 
 
@@ -92,7 +92,7 @@ while True:
     print('Connected to :', addr[0], ':', addr[1]) 
 
     # Inicializing the thread
-    start_new_thread(thread, (c,)) 
+    start_new_thread(thread, (c, addr)) 
 
 s.close() 
 
