@@ -12,4 +12,4 @@ Entres os comandos possíveis requisitados pelo cliente, deve ser usado no segui
 
 COMANDO:VALOR;VALOR;VALOR
 
-Para encerrar a comunicação com um dos clientes, basta escrever "sair" e uma mensagem de despedida será exibida. Em caso de erros no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento. Mais detalhes podem ser encontrados no pdf em anexo.
+Para encerrar a comunicação com um dos clientes, basta escrever "exit" e uma mensagem de despedida será exibida. Em caso de erros no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento. Mais detalhes podem ser encontrados no pdf em anexo.
