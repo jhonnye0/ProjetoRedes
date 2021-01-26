@@ -26,4 +26,11 @@ Parâmetros:
 
 EX: INCOME:JHONNYE;1200.67;RUA NOVE
 
+Status registrados:
+
+- 200: SUCESS
+- 300: Command Error
+- 301: Parameters Error
+- 400: Disconnect
+
 Para encerrar a comunicação com um dos clientes, basta escrever "exit" e uma mensagem de despedida será exibida. Em caso de erros no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento. Mais detalhes podem ser encontrados no pdf em anexo.
