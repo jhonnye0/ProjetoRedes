@@ -26,6 +26,8 @@ Parâmetros:
 
 EX: INCOME:JHONNYE;1200.67;RUA NOVE
 
+Em caso de erros ou sucesso no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento.
+
 Status registrados:
 
 - 200: SUCESS
@@ -33,4 +35,4 @@ Status registrados:
 - 301: Parameters Error
 - 400: Disconnect
 
-Para encerrar a comunicação com um dos clientes, basta escrever "exit" e uma mensagem de despedida será exibida. Em caso de erros no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento. Mais detalhes podem ser encontrados no pdf em anexo.
+Para encerrar a comunicação com um dos clientes, basta escrever "exit" e uma mensagem de despedida será exibida. Mais detalhes podem ser encontrados no pdf em anexo.
