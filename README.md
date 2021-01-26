@@ -21,6 +21,9 @@ Comandos: INCOME, REGISTRATION
 
 Parâmetros:
 
-- Income: Value, Address 
+- Income: Name, Value, Address 
+- Registration: Name, Id, School
+
+EX: INCOME:JHONNYE;1200.67;RUA NOVE
 
 Para encerrar a comunicação com um dos clientes, basta escrever "exit" e uma mensagem de despedida será exibida. Em caso de erros no preenchimento dos parâmetros ou dos comandos, são exibidas mensagens de status com a possibilidade de um novo preenchimento. Mais detalhes podem ser encontrados no pdf em anexo.
