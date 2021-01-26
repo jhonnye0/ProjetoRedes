@@ -4,7 +4,7 @@ O projeto foi implementado em Python 3.7 numa implementação multi-thread em qu
 
 python server.py
 
-Após isso, é possível executar o comando:
+Após isso, em outras abas do terminal, é possível executar o comando:
 
 python client.py
 
