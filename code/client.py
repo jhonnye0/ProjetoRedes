@@ -15,7 +15,7 @@ client_socket.connect(address)
 while True:
     text = input("Digite o comando seguido dos valores ou 'exit' para desconectar-se: ")
     
-    if(text.lower() == "exit"):
+    if(text.lower() =="exit"):
         client_socket.close()
         break
 
